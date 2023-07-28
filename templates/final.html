@@ -1,0 +1,44 @@
+{% extends "layout.html" %}  
+{% block content %}
+<!-- partial:index.partial.html -->
+<a class="button" href="{{ url_for('registered')}}">Registered Rides</a>
+<a class="button" href="{{ url_for('confirmed')}}">Booked Rides</a>
+
+
+
+<!-- partial -->
+<style>
+    body {margin:0;}
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #1f1e1e;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    li {
+      float: right;
+    }
+    
+    li a {
+      display: block;
+      color: rgb(115, 108, 248);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #ffffff;
+    }
+    
+    .active {
+      background-color: #ffffff;
+    }
+    </style>
+{% endblock %}

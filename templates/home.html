@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  display: block;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  
+  background-image: url("static/snu6.jpeg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px; 
+}
+h3{ font-family: Arial, sans-serif;
+   letter-spacing: -0.96px;
+   color: #5a64f7;
+   opacity: 1;
+   font-size: 3.5rem;
+   font-weight: 300;
+   line-height: 1.2;
+   margin-left: 110px;
+
+}
+p {
+  text-align: left;
+  letter-spacing: -0.45px;
+  color:black;
+  opacity: 1;
+  font: weight 400px;
+  font-size: 1.5rem;
+  margin-left: 110px;
+  margin-right: 125px;
+  margin-top: 10px;
+}
+
+.commisionwholeDiv {
+  background: white;
+  margin-bottom: -180px;
+
+}
+.commisiondiv {
+  padding-left: 110px;
+  margin-top: 50px;
+}
+
+.col-lg-6{
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+}
+
+.imag-commission{
+  height: 60%;
+  margin-top: 70px;
+
+
+}
+.col-12 {
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row{
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-6 { -webkit-box-flex: 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+  position:relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.image-commi {
+  height: 70px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  margin-left: 130px;
+
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+img{
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.pcarpoolsubdiv{
+  text-align: left;
+  letter-spacing: -0.45px;
+  color: black;
+  opacity: 1;
+
+}
+
+h2{
+  font-size: 2.5rem;
+  
+}
+.p1{
+  text-align: justify;
+
+}
+.img1{
+  float: left;
+  margin:5px;
+
+}
+.left{
+  float: left;
+  padding: 0 20px 20px 0;
+  height: 350px;
+  width:550px;
+  border-radius: 50%;
+  filter: drop-shadow(10px 10px 10px rgb(0, 111, 128));
+}
+.right{
+  float: right;
+  padding: 0 20px 20px 0;
+  height: 350px;
+  width:550px;
+  border-radius: 50%;
+  filter: drop-shadow(10px 10px 10px rgb(0, 111, 128));
+}
+h4{
+  font-size: 1.5rem;
+  color: #5a64f7;
+  font-weight: bold;
+}
+h5{
+  font-size: 1.5rem;
+  color: #5a64f7;
+  font-weight: bold;
+  text-align: justify;
+  margin-left: 110px;
+}
+
+
+*, ::after, ::before{box-sizing: border-box}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+     <img src="static/logowhite.jpeg" width="145" height="60">
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      
+      <a href="{{ url_for('home')}}" class="w3-bar-item w3-button" >HOME</a>
+      <a href="#about" class="w3-bar-item w3-button"> ABOUT</a>
+      <a href="{{ url_for('login')}}" class="w3-bar-item w3-button">LOGIN</a>
+      
+      <a href="#contact" class="w3-bar-item w3-button"> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container " id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+    
+    <p><a href="{{ url_for('login') }}" class="w3-button w3-white w3-padding-large w3-large w3-margin-top  w3-hover-opacity-off">Book/Register your Carpool now</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 >What Is Campus Pool?</h3><br>
+  <p>Travelling becomes difficult and expensive considering SNIOE's location . We all like going together.
+    Campus Pool will help you to connect with other students who are travelling on the same route and same time.
+  It helps commuters to start sharing the ride instead of travelling alone.
+Innovative technology to discover, coonect , route-match , coordinate and cost-share in seamless manner.
+It automates end to end process of carpooling and makes pooling safe , comfortable and affordable for the students of SNIOE.  </p>
+ <br> <br>
+  <h3>Why Campus Pool?</h3>
+
+<div class ="row commissionwholeDiv ">
+    <div class="col-lg-6 col-12 commissiondiv">
+      <div class="row">
+        <div class="col-lg-6 col-6">
+          <img src="static/ev.jpeg" class="image-commi" alt="why campuspool">
+           <p class="pcarpoolsubdiv"> Saves Environment </p>        </div>
+        <div class="col-lg-6 col-6">
+           <img src="static/money.jpeg" class="image-commi" alt="why campuspool">
+            <p class="pcarpoolsubdiv">Saves Money</p>        </div>
+
+      </div>
+      <hr>
+      <div class="row content ">
+        <div class="col-lg-6 col-6">
+          <img src="static/network.jpeg" class="image-commi" alt="why campuspool">
+            <p class="pcarpoolsubdiv">Increases networking</p>
+
+        </div>
+        <div class="col-lg-6 col-6">
+          <img src="static/traffic.jpeg" class="image-commi" alt="why campuspool">
+            <p class="pcarpoolsubdiv">Reduces Traffic</p>
+        </div>
+      </div>
+    </div>
+    
+</div>
+</div>
+  
+    
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-blue" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class=" w3-center" >
+      <h2 >Campus Pool is the first college car pooling application in India !</h2>
+      
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+  <img src="static/offer.jpg" alt="img1" class="left" />
+ <div class="p1">
+  <h3>Offer Carpool</h3>
+  <h4>Your Route. Your Time</h4>
+  <p>
+    Share your empty car seats in carpool and cut down your commute costs. Enjoy meeting amazing new people every day in carpool, grow your network and make your boring rides a fun ride.
+  </p> </div>
+  <br> <br>
+  <img src="static/find.png" alt="img1" class="right" />
+ <div class="p1">
+  <h3>Find Carpool</h3>
+  <h5>Convinient. Faster. Affordable</h5>
+  <p>
+    Join your peers and get a comfortable car ride at <br> less costs. Travel with your own choice.
+  </p> </div>
+
+  <br> <br> <br> <br> <br>
+<!-- Promo Section "Statistics" -->
+
+<div class="w3-container w3-row w3-center w3-blue w3-padding-64">
+  <h2>IF YOU CARPOOL EVERYDAY THEN: :</h2>
+  <br>
+  <div class="w3-quarter">
+    
+    <span class="w3-xxlarge">335</span>
+    <br>Million Litres Of Fuel Is Saved
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">780K</span>
+    <br>Fewer Vehicle Trips Everyday
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">13</span>
+    <br>Metric Tonnes of Pollution Is Reduced
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">150+</span>
+    <br>Meetings
+  </div>
+</div>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT US</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+  
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 8899899899</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: campuspool2023@gmail.com</p>
+    <br>
+    <form action="https://formsubmit.co/campuspool2023@gmail.com" method="POST" >
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="firstName"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Phone Number" required name="phone"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="comments,&nbsp;questions"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="{{ url_for('home')}}" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+ 
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

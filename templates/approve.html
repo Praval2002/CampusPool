@@ -1,0 +1,28 @@
+<body>
+<p> THIS IS THE PERSON YOU'll BE TRAVELLING WITH, {{ data[1] }} at {{datas[3] }} <br> DO YOU CONFIRM?</p>
+
+<form method="POST" action="http://127.0.0.1:5000/approve">
+<input type ="hidden" name ="id" value="{{data[0]}}">
+<input type ="hidden" name ="time" value="{{datas[3]}}">
+<input type ="hidden" name ="date" value="{{datas[2]}}">
+<input type ="hidden" name ="destination" value="{{datas[5]}}">
+<input type="submit" placeholder="Confirm?">
+</form>
+</body>
+<style>
+   body{
+  background: -webkit-linear-gradient(left,  rgb(115, 108, 248), #2d48f5);
+  background: linear-gradient(to right, rgb(115, 108, 248), #1836cd);
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+}
+p{
+    padding: 10%;
+    align-items: center;
+}
+form{
+    padding-left: 10%;
+    align-items: center;
+
+}
+</style>

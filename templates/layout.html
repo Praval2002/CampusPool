@@ -1,0 +1,17 @@
+<head>
+    <body>
+    <ul>
+      <li style="float: left"><img src="static/fun.jpeg" width="120" height="45"></li>
+      <li><a href="{{ url_for('logout')}}">Logout</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="{{ url_for('user')}}">Home</a></li>
+    </ul>
+  <meta charset="UTF-8">
+  <title>search/register ride</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="static/style1.css">
+</head>
+<body>
+{% block content %}
+{% endblock %}

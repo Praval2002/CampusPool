@@ -1,0 +1,33 @@
+<!-- <p> THIS IS THE PERSON YOU'll TRAVELLING WITH, {{ data[1] }} at {{ datas[4] }} on {{ datas[3]}}</p>
+<p>DO YOU CONFIRM?</p>
+<form method="POST" action="http://127.0.0.1:5000/chathome">
+<input type ="number" maxlength="4" minlength="4" name ="code" placeholder="ENTER A 4 DIGIT NUMBER">    
+<input type ="hidden" name ="id" value="{{datas[0]}}">
+<input type ="hidden" name ="ids" value="{{data[1]}}">
+<input type ="hidden" name ="time" value="{{data[3]}}">
+<input type ="hidden" name ="date" value="{{datas[2]}}">
+<input type ="hidden" name ="destination" value="{{datas[5]}}">
+<button type="submit" name="create" class="create-btn">YES</button>
+</form>
+ -->
+
+<body>
+<p style="font-size: 1.2em;padding-top: 10%  ; padding-left:10%;font-weight: bold;"> THIS IS THE PERSON YOU'LL TRAVELLING WITH, {{ data[1] }} at {{ datas[4] }} on {{ datas[3]}} <br> DO YOU CONFIRM?</p>
+
+<form method="POST" action="http://127.0.0.1:5000/chathome" style="margin-top: 10px;margin-left: 250px;">
+    <input type="number" max="9999" min="1000" name="code" placeholder="4 Digit" style="padding: 10px; margin-right: 10px;font-size: 36px;">
+    <input type="hidden" name="id" value="{{datas[0]}}">
+    <input type="hidden" name="ids" value="{{data[1]}}">
+    <input type="hidden" name="time" value="{{data[3]}}">
+    <input type="hidden" name="date" value="{{datas[2]}}">
+    <input type="hidden" name="destination" value="{{datas[5]}}">
+    <button type="submit" name="create" class="create-btn" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">YES</button>
+</form>
+</body>
+<style>
+     body {
+    background:  rgb(115, 108, 248);
+    margin: 0;
+    padding: 0;
+  }
+</style>
